@@ -48,14 +48,11 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
-
-
- name: Generate data
+      - name: Generate data
         run: |
-          source("make_results.R")
+          source("R/job.R")
         shell: Rscript {0}
-
-- name: Commit files
+      - name: Commit files
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
