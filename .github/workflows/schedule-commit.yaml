@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "50 * * * *"
+    - cron: "30 0 * * *"
   push:
 
 jobs:
