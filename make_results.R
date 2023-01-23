@@ -13,6 +13,7 @@ library(ggplot2)
 library(stringr)
 library(slider)
 library(scales)
+library(patchwork)
 Sys.setlocale("LC_ALL", "is_IS.UTF-8")
 
 my_date_labels <- function(dates) {

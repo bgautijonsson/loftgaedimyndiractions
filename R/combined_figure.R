@@ -1,15 +1,15 @@
-library(patchwork)
 
 
-p <- (p1 + labs(caption = NULL)) + 
+
+p <- (p1 + labs(caption = NULL)) +
   (p2 + labs(caption = NULL)) +
-  (p3 + labs(caption = NULL)) + 
+  (p3 + labs(caption = NULL)) +
   p4 +
   plot_layout(ncol = 2) &
   theme(
     plot.title = element_text(size = 15),
     plot.subtitle = element_markdown(size = 12)
-  ) 
+  )
 
 
 ggsave(
@@ -20,9 +20,9 @@ ggsave(
 
 
 
-p <- (p1 + labs(caption = NULL)) + 
+p <- (p1 + labs(caption = NULL)) +
   (p2 + labs(caption = NULL)) +
-  (p3 + labs(caption = NULL)) + 
+  (p3 + labs(caption = NULL)) +
   p4 +
   plot_layout(ncol = 2) &
   theme(
@@ -30,7 +30,7 @@ p <- (p1 + labs(caption = NULL)) +
     plot.subtitle = element_markdown(size = 12),
     plot.background = element_blank(),
     panel.background = element_blank()
-  ) 
+  )
 
 
 ggsave(
