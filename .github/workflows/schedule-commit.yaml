@@ -26,7 +26,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
       - name: Generate data
         run: |
-          source("R/job.R")
+          source("make_results.R")
         shell: Rscript {0}
       - name: Commit files
         run: |
