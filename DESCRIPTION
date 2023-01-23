@@ -26,6 +26,7 @@ Imports:
     slider,
     stringr,
     tidyr,
+    usethis,
     vroom
 URL: https://github.com/bgautijonsson/loftgaedimyndiractions
 BugReports: https://github.com/bgautijonsson/loftgaedimyndiractions/issues
