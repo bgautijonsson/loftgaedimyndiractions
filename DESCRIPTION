@@ -1,4 +1,4 @@
-Package: loftgaedimyndir
+Package: loftgaedimyndiractions
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
@@ -27,3 +27,5 @@ Imports:
     stringr,
     tidyr,
     vroom
+URL: https://github.com/bgautijonsson/loftgaedimyndiractions
+BugReports: https://github.com/bgautijonsson/loftgaedimyndiractions/issues
