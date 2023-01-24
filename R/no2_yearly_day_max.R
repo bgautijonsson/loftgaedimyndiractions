@@ -1,4 +1,4 @@
-writeLines("---------------\nno2_yearly_day_max.R\n---------------")
+writeLines("---------------\nRunning no2_yearly_day_max.R\n---------------")
 
 p4 <- d |>
   filter(
@@ -40,6 +40,9 @@ p4 <- d |>
     limits = c(0, 20),
     expand = expansion(),
     labels = label_number(suffix = " sinnum")
+  ) +
+  theme(
+    plot.subtitle = element_text(size = 12)
   ) +
   labs(
     x = NULL,

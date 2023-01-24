@@ -16,8 +16,7 @@ p <- (p1 + labs(caption = NULL)) +
   p5 +
   plot_layout(ncol = 2, design = layout, heights = heights) &
   theme(
-    plot.title = element_text(size = 15),
-    plot.subtitle = element_markdown(size = 12)
+    plot.title = element_text(size = 15)
   )
 
 ggsave(
@@ -36,7 +35,6 @@ p <- (p1 + labs(caption = NULL)) +
   plot_layout(ncol = 2, design = layout) &
   theme(
     plot.title = element_text(size = 15),
-    plot.subtitle = element_markdown(size = 12),
     plot.background = element_blank(),
     panel.background = element_blank(),
     legend.background = element_blank()

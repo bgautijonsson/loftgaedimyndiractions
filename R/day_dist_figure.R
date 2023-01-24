@@ -1,4 +1,4 @@
-writeLines("---------------\nday_dist_figure.R\n---------------")
+writeLines("---------------\nRunning day_dist_figure.R\n---------------")
 
 plot_dat <- d |>
     filter(
@@ -43,14 +43,14 @@ p5 <- plot_dat |>
     ) +
     theme(
         legend.title = element_text(size = 10),
-        legend.text = element_text(size = 8)
+        legend.text = element_text(size = 8),
+        plot.subtitle = element_text(size = 12)
     ) +
     labs(
         x = NULL,
         y = NULL,
         fill = "NO2",
         title = "Hvenær dags mælist köfnunartvíoxíð (NO2) hæst?",
-        subtitle = NULL,
         caption = caption
     )
 

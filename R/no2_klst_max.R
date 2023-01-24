@@ -1,4 +1,4 @@
-writeLines("---------------\nno2_klst_max.R\n---------------")
+writeLines("---------------\nRunning no2_klst_max.R\n---------------")
 
 colour_2023 <- "black"
 
@@ -75,7 +75,7 @@ p1 <- plot_dat |>
   ) +
   theme(
     legend.position = "none",
-    plot.subtitle = element_markdown()
+    plot.subtitle = element_markdown(size = 12),
   ) +
   labs(
     x = NULL,

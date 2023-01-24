@@ -1,4 +1,4 @@
-writeLines("---------------\nno2_daily_mean.R\n---------------")
+writeLines("---------------\nRunning no2_daily_mean.R\n---------------")
 
 colour_2023 <- "black"
 
@@ -77,7 +77,7 @@ p2 <- plot_dat |>
   ) +
   theme(
     legend.position = "none",
-    plot.subtitle = element_markdown()
+    plot.subtitle = element_markdown(size = 12),
   ) +
   labs(
     x = NULL,

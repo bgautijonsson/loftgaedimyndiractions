@@ -1,4 +1,4 @@
-writeLines("---------------\nno2_yearly_klst_max.R\n---------------")
+writeLines("---------------\nRunning no2_yearly_klst_max.R\n---------------")
 
 p3 <- d |>
   filter(
@@ -39,6 +39,9 @@ p3 <- d |>
     limits = c(0, 60),
     expand = expansion(),
     labels = label_number(suffix = " sinnum")
+  ) +
+  theme(
+    plot.subtitle = element_text(size = 12)
   ) +
   labs(
     x = NULL,
