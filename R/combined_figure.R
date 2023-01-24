@@ -1,4 +1,4 @@
-
+writeLines("---------------\nRunning combined_figure.R\n---------------")
 layout <- '
 AB
 CD

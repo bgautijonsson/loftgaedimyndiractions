@@ -1,28 +1,30 @@
-p4 <- d |> 
+writeLines("---------------\nno2_yearly_day_max.R\n---------------")
+
+p4 <- d |>
   filter(
     station_name == "Grensásvegur"
-  ) |> 
-  select(station_name, dagsetning, no2) |> 
-  group_by(station_name, dags = as_date(dagsetning)) |> 
+  ) |>
+  select(station_name, dagsetning, no2) |>
+  group_by(station_name, dags = as_date(dagsetning)) |>
   summarise(
     fj_yfir = sum(no2 >= 200, na.rm = T),
     mean = mean(no2, na.rm = T)
-  ) |> 
-  arrange(dags) |> 
-  drop_na() |> 
-  group_by(station_name) |> 
+  ) |>
+  arrange(dags) |>
+  drop_na() |>
+  group_by(station_name) |>
   mutate(
     fj_yfir_klst = slide_dbl(
-      fj_yfir, 
+      fj_yfir,
       sum,
       .before = 364, .complete = F
     ),
     fj_yfir_dag = slide_dbl(
-      mean, 
+      mean,
       ~ sum(.x > 75),
       .before = 364, .complete = F
     ),
-  ) |> 
+  ) |>
   ggplot(aes(dags, fj_yfir_dag)) +
   geom_texthline(
     yintercept = 7,

@@ -17,9 +17,11 @@ library(patchwork)
 library(zoo)
 Sys.setlocale("LC_ALL", "is_IS.UTF-8")
 
+plot_year <- 1012
+
 my_date_labels <- function(dates) {
   case_when(
-    yday(dates) == 1 ~ format(dates, "%d.\n%B\n%Y"),
+    (yday(dates) == 1) & (year(dates) != plot_year) ~ format(dates, "%d.\n%B\n%Y"),
     day(dates) == 1 ~ format(dates, "%d.\n%B"),
     TRUE ~ format(dates, "%d.")
   )

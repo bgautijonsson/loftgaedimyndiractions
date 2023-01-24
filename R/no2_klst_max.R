@@ -1,3 +1,5 @@
+writeLines("---------------\nno2_klst_max.R\n---------------")
+
 colour_2023 <- "black"
 
 colour_other <- "grey70"
@@ -11,7 +13,7 @@ plot_dat <- d |>
     day = day(dagsetning),
     year = year(dagsetning),
     yday = yday(dagsetning),
-    plot_date = clock::date_build(year = 2020, month = month, day = day)
+    plot_date = clock::date_build(year = plot_year, month = month, day = day)
   ) |>
   filter(yday <= day_stop) |>
   group_by(year, month, day, plot_date, yday, station_name) |>

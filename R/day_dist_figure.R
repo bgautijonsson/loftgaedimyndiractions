@@ -1,3 +1,5 @@
+writeLines("---------------\nday_dist_figure.R\n---------------")
+
 plot_dat <- d |>
     filter(
         station_name == "Grensásvegur",
