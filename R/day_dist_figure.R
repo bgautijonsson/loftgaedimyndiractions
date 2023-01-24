@@ -36,10 +36,7 @@ p5 <- plot_dat |>
         ),
         labels = label_number(accuracy = 1),
         guide = guide_colorbar(
-            barheight = unit(0.3, "npc"),
-            title = "NO2",
-            title.hjust = 0,
-            raster = T
+            barheight = unit(0.3, "npc")
         )
     ) +
     theme(
@@ -49,8 +46,10 @@ p5 <- plot_dat |>
     labs(
         x = NULL,
         y = NULL,
+        fill = "NO2",
         title = "Hvenær dags mælist köfnunartvíoxíð (NO2) hæst?",
-        subtitle = " "
+        subtitle = NULL,
+        caption = caption
     )
 
 

@@ -31,7 +31,7 @@ ggsave(
 p <- (p1 + labs(caption = NULL)) +
   (p2 + labs(caption = NULL)) +
   (p3 + labs(caption = NULL)) +
-  p4 +
+  (p4 + labs(caption = NULL)) +
   p5 +
   plot_layout(ncol = 2, design = layout) &
   theme(
