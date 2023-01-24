@@ -1,39 +1,39 @@
 colour_2023 <- "black"
-  
+
 colour_other <- "grey70"
-  
-plot_dat <- d |> 
+
+plot_dat <- d |>
   filter(
     station_name == "Grensásvegur"
-  ) |> 
+  ) |>
   mutate(
     month = month(dagsetning),
     day = day(dagsetning),
     year = year(dagsetning),
     yday = yday(dagsetning),
     plot_date = clock::date_build(year = 2020, month = month, day = day)
-  ) |> 
-  filter(yday <= day_stop) |> 
-  group_by(year, month, day, plot_date, yday, station_name) |> 
+  ) |>
+  filter(yday <= day_stop) |>
+  group_by(year, month, day, plot_date, yday, station_name) |>
   summarise(
     max = max(no2, na.rm = T),
     mean = mean(no2, na.rm = T),
     .groups = "drop"
-  ) |> 
-  drop_na() |> 
+  ) |>
+  drop_na() |>
   mutate(
     colour = ifelse(year == 2023, colour_2023, colour_other),
     linewidth = ifelse(year == 2023, 1, 0)
   )
 
-p1 <- plot_dat |> 
+p1 <- plot_dat |>
   ggplot(aes(plot_date, max)) +
   geom_texthline(
-    yintercept = 200, 
+    yintercept = 200,
     lty = 2,
-    alpha = 0.3, 
-    size = 4, 
-    linewidth = 0.3, 
+    alpha = 0.3,
+    size = 4,
+    linewidth = 0.3,
     label = "Klukkustundarmörk",
     hjust = 0.32
   ) +

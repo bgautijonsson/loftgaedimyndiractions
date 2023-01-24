@@ -27,6 +27,7 @@ Imports:
     stringr,
     tidyr,
     usethis,
-    vroom
+    vroom,
+    zoo
 URL: https://github.com/bgautijonsson/loftgaedimyndiractions
 BugReports: https://github.com/bgautijonsson/loftgaedimyndiractions/issues

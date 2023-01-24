@@ -14,14 +14,15 @@ library(stringr)
 library(slider)
 library(scales)
 library(patchwork)
+library(zoo)
 Sys.setlocale("LC_ALL", "is_IS.UTF-8")
 
 my_date_labels <- function(dates) {
   dagur <- day(dates)
-  ifelse(
-    dagur == 1,
-    format(dates, "%d\n%B"),
-    format(dates, "%d")
+  case_when(
+    yday(dates) == 1 ~ format(dates, "%d.\n%B\n%Y"),
+    day(dates) == 1 ~ format(dates, "%d.\n%B"),
+    TRUE ~ format(dates, "%d.")
   )
 }
 
