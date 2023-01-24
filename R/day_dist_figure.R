@@ -9,7 +9,8 @@ plot_dat <- d |>
         dags = as_date(dagsetning),
         no2 = pmax(no2, 0),
         no2 = na.approx(no2, na.rm = FALSE)
-    )
+    ) |>
+    drop_na()
 
 
 p5 <- plot_dat |>
@@ -36,7 +37,7 @@ p5 <- plot_dat |>
         labels = label_number(accuracy = 1),
         guide = guide_colorbar(
             barheight = unit(0.3, "npc"),
-            title = expression(NO^2),
+            title = "NO2",
             title.hjust = 0,
             raster = T
         )
