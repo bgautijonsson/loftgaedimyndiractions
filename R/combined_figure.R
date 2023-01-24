@@ -46,5 +46,5 @@ p <- (p1 + labs(caption = NULL)) +
 ggsave(
   plot = p,
   filename = "Figures/combined_image_page.png",
-  width = 8, height = asp * 8, scale = 2
+  width = 8, height = 0.621 * 8, scale = 2
 )
