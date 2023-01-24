@@ -11,7 +11,6 @@ p <- (p1 + labs(caption = NULL)) +
     plot.subtitle = element_markdown(size = 12)
   )
 
-
 ggsave(
   plot = p,
   filename = "Figures/combined_image.png",
