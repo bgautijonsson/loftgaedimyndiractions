@@ -8,7 +8,7 @@ plot_dat <- d |>
         klst = hour(dagsetning),
         dags = as_date(dagsetning),
         no2 = pmax(no2, 0),
-        no2 = na.approx(no2)
+        no2 = na.approx(no2, na.rm = FALSE)
     )
 
 
