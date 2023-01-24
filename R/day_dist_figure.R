@@ -36,8 +36,8 @@ p5 <- plot_dat |>
         labels = label_number(accuracy = 1),
         guide = guide_colorbar(
             barheight = unit(0.3, "npc"),
-            title = expression(NO^2~bgroup("(",µg / m^3,")")),
-            title.hjust = 1,
+            title = expression(NO^2),
+            title.hjust = 0,
             raster = T
         )
     ) +
