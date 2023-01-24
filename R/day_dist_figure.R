@@ -49,7 +49,8 @@ p5 <- plot_dat |>
     labs(
         x = NULL,
         y = NULL,
-        title = "Hvenær dags mælist köfnunartvíoxíð (NO2) hæst?"
+        title = "Hvenær dags mælist köfnunartvíoxíð (NO2) hæst?",
+        subtitle = " "
     )
 
 
