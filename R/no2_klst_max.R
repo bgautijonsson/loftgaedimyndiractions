@@ -86,7 +86,7 @@ p1 <- plot_dat |>
       "</b>",
       "borið saman við  ",
       glue("<b style='color:{colour_other}'>"),
-      "2019 - 2022",
+      "2019 til 2022",
       "</b>"
     ),
     caption = caption

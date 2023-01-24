@@ -1,41 +1,41 @@
 colour_2023 <- "black"
-  
-colour_other <- "grey70"
-  
 
-plot_dat <- d |> 
+colour_other <- "grey70"
+
+
+plot_dat <- d |>
   filter(
     station_name == "Grensásvegur"
-  ) |> 
+  ) |>
   mutate(
     month = month(dagsetning),
     day = day(dagsetning),
     year = year(dagsetning),
     yday = yday(dagsetning),
     plot_date = clock::date_build(year = 2020, month = month, day = day)
-  ) |> 
-  filter(yday <= day_stop) |> 
-  group_by(year, month, day, plot_date, yday, station_name) |> 
+  ) |>
+  filter(yday <= day_stop) |>
+  group_by(year, month, day, plot_date, yday, station_name) |>
   summarise(
     max = max(no2, na.rm = T),
     mean = mean(no2, na.rm = T),
     .groups = "drop"
-  ) |> 
-  drop_na() |> 
+  ) |>
+  drop_na() |>
   mutate(
     colour = ifelse(year == 2023, colour_2023, colour_other),
     linewidth = ifelse(year == 2023, 1, 0)
   )
 
-p2 <- plot_dat |> 
+p2 <- plot_dat |>
   ggplot(aes(plot_date, mean)) +
   geom_texthline(
     yintercept = 75,
-    lty = 2, 
-    alpha = 0.3, 
-    size = 4, 
-    linewidth = 0.3, 
-    label = "Dagsmörk", 
+    lty = 2,
+    alpha = 0.3,
+    size = 4,
+    linewidth = 0.3,
+    label = "Dagsmörk",
     hjust = 0.3
   ) +
   geom_line(
@@ -63,7 +63,8 @@ p2 <- plot_dat |>
   ) +
   scale_y_continuous(
     limits = c(0, 200),
-    expand = expansion()
+    expand = expansion(),
+    breaks = c(0, 50, 75, 100, 150, 200)
   ) +
   scale_colour_identity() +
   scale_linewidth_continuous(
@@ -87,7 +88,7 @@ p2 <- plot_dat |>
       "</b>",
       "borið saman við  ",
       glue("<b style='color:{colour_other}'>"),
-      "2019 - 2022",
+      "2019 til 2022",
       "</b>"
     ),
     caption = caption
