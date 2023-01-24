@@ -18,7 +18,6 @@ library(zoo)
 Sys.setlocale("LC_ALL", "is_IS.UTF-8")
 
 my_date_labels <- function(dates) {
-  dagur <- day(dates)
   case_when(
     yday(dates) == 1 ~ format(dates, "%d.\n%B\n%Y"),
     day(dates) == 1 ~ format(dates, "%d.\n%B"),
@@ -37,7 +36,7 @@ title <- "#484D6D"
 
 subtitle <- "#525252"
 
-caption <- "#36383A"
+caption_col <- "#36383A"
 
 axis_text <- "#4A4C45"
 
@@ -80,7 +79,7 @@ theme_set(
         margin = margin(t = 0, r = 0, b = 5, l = 5)
       ),
       plot.caption = element_text(
-        colour = caption,
+        colour = caption_col,
         hjust = 1,
         size = 0.5 * base_size,
         margin = margin(t = 7, r = 5, b = 5, l = 5)
