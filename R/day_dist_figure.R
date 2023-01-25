@@ -44,13 +44,16 @@ p5 <- plot_dat |>
     theme(
         legend.title = element_text(size = 10),
         legend.text = element_text(size = 8),
-        plot.subtitle = element_text(size = 12)
+        plot.subtitle = element_text(size = 12),
+        plot.caption = element_text(vjust = 18, hjust = 1, margin = margin()),
+        plot.caption.position = "plot"
     ) +
     labs(
         x = NULL,
         y = NULL,
         fill = "NO2",
         title = "Hvenær dags mælist köfnunartvíoxíð (NO2) hæst?",
+        subtitle = "Leyfilegt klukkustundargildi er allt að 200 míkrógrömm á rúmmetra",
         caption = caption
     )
 

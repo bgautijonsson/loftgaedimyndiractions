@@ -31,7 +31,7 @@ my_date_labels <- function(dates) {
 caption <- str_c(
   "Byggt á gögnum frá loftgaedi.is",
   "\n",
-  "Gögn og kóði: https://github.com/bgautijonsson/loftgaedimyndir"
+  "Gögn og kóði: https://github.com/bgautijonsson/loftgaedimyndiractions"
 )
 
 title <- "#484D6D"
