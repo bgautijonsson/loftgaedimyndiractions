@@ -37,7 +37,7 @@ p1 <- plot_dat |>
     size = 4,
     linewidth = 0.3,
     label = "Klukkustundarmörk",
-    hjust = 0.32
+    hjust = 0.95
   ) +
   geom_line(
     data = plot_dat |> filter(year != 2023),

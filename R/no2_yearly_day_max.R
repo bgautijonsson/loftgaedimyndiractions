@@ -47,8 +47,8 @@ p4 <- d |>
   labs(
     x = NULL,
     y = NULL,
-    title = "Hversu oft hefur sólarhringsmeðaltal NO2 farið yfir mörkin undanfarið ár?",
-    subtitle = "Sólarhringsheilsuverndarmörkin eru allt að 75 míkrógrömm á rúmmetra",
+    title = "Hversu oft hefur NO2 farið yfir dagsmörkin undanfarið ár?",
+    subtitle = "Dagsmörkin eru allt að 75 míkrógrömm á rúmmetra",
     caption = caption
   )
 
