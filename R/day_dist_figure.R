@@ -1,9 +1,13 @@
 writeLines("---------------\nRunning day_dist_figure.R\n---------------")
 
+day_dist_col <- "#d6604d"
+
+start_date <- floor_date(Sys.Date() - dmonths(3), "day")
+
 plot_dat <- d |>
     filter(
         station_name == "Grensásvegur",
-        dagsetning >= date_build(2022, 11, 01)
+        dagsetning >= start_date
     ) |>
     select(dagsetning, no2) |>
     mutate(
@@ -42,9 +46,9 @@ p5 <- plot_dat |>
         )
     ) +
     theme(
-        legend.title = element_text(size = 10),
-        legend.text = element_text(size = 8),
-        plot.subtitle = element_text(size = 12),
+        legend.title = element_text(size = 10, face = "bold"),
+        legend.text = element_text(size = 8, face = "bold"),
+        plot.subtitle = element_markdown(size = 12),
         plot.caption = element_text(vjust = 18, hjust = 1, margin = margin()),
         plot.caption.position = "plot"
     ) +
@@ -53,7 +57,15 @@ p5 <- plot_dat |>
         y = NULL,
         fill = "NO2",
         title = "Hvenær dags mælist köfnunartvíoxíð (NO2) hæst?",
-        subtitle = "Leyfilegt klukkustundargildi er allt að 200 míkrógrömm á rúmmetra",
+        subtitle = glue(
+            str_c(
+                "Leyfilegt klukkustundargildi er allt að ",
+                "<b style=color:{day_dist_col}>",
+                "200 míkrógrömm",
+                "</b>",
+                " á rúmmetra"
+            )
+        ),
         caption = caption
     )
 
