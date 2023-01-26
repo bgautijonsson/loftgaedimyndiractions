@@ -1,6 +1,6 @@
 writeLines("---------------\nRunning day_dist_figure.R\n---------------")
 
-hour_col <- "#bd1c14"
+hour_col <- "#c14a00"
 
 day_col <- "#b48100"
 
@@ -34,12 +34,13 @@ p5 <- plot_dat |>
         labels = label_number(suffix = ":00"),
         expand = expansion()
     ) +
-    scale_fill_gradient2(
-        # palette = "RdYlGn",
-        low = "#00522c",
-        mid = "#ffe7bd",
-        high = "#990024",
-        midpoint = 75,
+    scale_fill_distiller(
+        palette = "RdYlBu",
+        # low = "#00522c",
+        # mid = "#ffffbf",
+        # high = "#990024",
+        # midpoint = 75,
+        values = rescale(c(0, 75, 292)),
         breaks = c(
             0,
             max(plot_dat$no2, na.rm = T),
@@ -67,7 +68,7 @@ p5 <- plot_dat |>
         guide = guide_legend()
     ) +
     guides(
-        alpha = FALSE
+        alpha = "none"
     ) +
     theme(
         legend.title = element_text(size = 10, face = "bold"),
