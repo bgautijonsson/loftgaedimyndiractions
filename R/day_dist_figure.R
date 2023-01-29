@@ -1,8 +1,5 @@
 writeLines("---------------\nRunning day_dist_figure.R\n---------------")
 
-hour_col <- "#c14a00"
-
-day_col <- "#b48100"
 
 start_date <- floor_date(Sys.Date() - dmonths(3), "day")
 

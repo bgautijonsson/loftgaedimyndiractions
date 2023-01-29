@@ -19,6 +19,10 @@ Sys.setlocale("LC_ALL", "is_IS.UTF-8")
 options(encoding = "UTF-8")
 plot_year <- 1012
 
+hour_col <- "#bd1c14"
+
+day_col <- "#b48100"
+
 my_date_labels <- function(dates) {
   case_when(
     (yday(dates) == 1) & (year(dates) != plot_year) ~ format(dates, "%d.\n%B\n%Y"),
