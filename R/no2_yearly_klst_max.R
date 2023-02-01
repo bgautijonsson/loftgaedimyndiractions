@@ -52,8 +52,3 @@ p3 <- d |>
   )
 
 
-ggsave(
-  plot = p3,
-  filename = "Figures/fj_klst.png",
-  width = 8, height = 0.621 * 8, scale = 1.3
-)

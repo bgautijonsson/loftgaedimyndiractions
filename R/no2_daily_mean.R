@@ -78,6 +78,7 @@ p2 <- plot_dat |>
   theme(
     legend.position = "none",
     plot.subtitle = element_markdown(size = 12),
+    plot.margin = margin(t = 5, r = 15, b = 5, l = 5)
   ) +
   labs(
     x = NULL,
@@ -95,9 +96,3 @@ p2 <- plot_dat |>
     ),
     caption = caption
   )
-
-ggsave(
-  plot = p2,
-  filename = "Figures/no2_mean.png",
-  width = 8, height = 0.621 * 8, scale = 1.3
-)

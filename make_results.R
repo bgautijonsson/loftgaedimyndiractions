@@ -17,6 +17,9 @@ library(patchwork)
 library(zoo)
 Sys.setlocale("LC_ALL", "is_IS.UTF-8")
 options(encoding = "UTF-8")
+day_stop <- yday(Sys.Date())
+
+
 plot_year <- 1012
 
 hour_col <- "#bd1c14"

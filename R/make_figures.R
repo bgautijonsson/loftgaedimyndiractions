@@ -1,4 +1,4 @@
-day_stop <- day(Sys.Date())
+
 
 d <- vroom("Data/loftgaedi_reykjavik.csv")
 

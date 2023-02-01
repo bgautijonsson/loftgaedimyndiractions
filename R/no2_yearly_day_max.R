@@ -52,9 +52,3 @@ p4 <- d |>
     caption = caption
   )
 
-
-ggsave(
-  plot = p4,
-  filename = "Figures/fj_day.png",
-  width = 8, height = 0.621 * 8, scale = 1.3
-)

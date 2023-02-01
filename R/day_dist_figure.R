@@ -75,7 +75,7 @@ p5 <- plot_dat |>
         legend.margin = margin(),
         legend.box.margin = margin(),
         plot.subtitle = element_markdown(size = 12, margin = margin(b = 10)),
-        plot.caption = element_text(vjust = 18, hjust = 1, margin = margin()),
+        plot.caption = element_text(vjust = 18, hjust = 1, margin = margin(t = 13)),
         plot.caption.position = "plot",
         plot.margin = margin(t = 10, r = 5, b = 5, l = 5)
     ) +
