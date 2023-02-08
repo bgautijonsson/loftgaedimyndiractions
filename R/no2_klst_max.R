@@ -58,7 +58,7 @@ p1 <- plot_dat |>
     aes(group = year, col = colour, size = linewidth)
   ) +
   scale_x_date(
-    breaks = date_breaks("day"),
+    breaks = plot_breaks,
     labels = my_date_labels,
     expand = expansion(add = 0.2)
   ) +

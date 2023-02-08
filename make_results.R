@@ -22,6 +22,12 @@ day_stop <- yday(Sys.Date())
 
 plot_year <- 1012
 
+plot_breaks <- date_build(
+  plot_year,
+  rep(1:12, each = 3),
+  rep(c(1, 10, 20), times = 12)
+)
+
 hour_col <- "#bd1c14"
 
 day_col <- "#b48100"
